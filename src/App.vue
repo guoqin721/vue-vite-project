@@ -1,33 +1,15 @@
-<!--
- * @Author: guoqin 1178562936@qq.com
- * @Date: 2022-10-19 11:14:00
- * @LastEditors: guoqin 1178562936@qq.com
- * @LastEditTime: 2022-10-28 17:23:19
- * @FilePath: \vue-project\src\App.vue
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
 <template>
-  <input type="text" v-model="name" placeholder="name" name="" id="">
-  <input type="text" v-model="sex" placeholder="sex" id="">
-  <h1>{{person}}</h1>
+  <input type="text" v-model="message1" name="" id="">
+  <input type="text" v-model="message2.b.c" name="" id="">
 </template>
 <script setup lang="ts">
-import {ref, computed} from 'vue'
-let name = ref()
-let sex = ref()
-// let person = computed(() => {
-//   return `${name.value}-${sex.value}`
-// })
-let person = computed({
-  get() {
-    return `${name.value}-${sex.value}`
-  },
-  set(value) {
-    name.value = value.split('-')[0]
-    sex.value = value.split('-')[1]
-  }
+import {ref, reactive, watchEffect} from 'vue'
+const message1 = ref<string>('message1')
+const message2 = reactive({a: 1, b: {c: 3}})
+watchEffect((onin) => {
+  console.log('message1', message1.value) // 这里得写.value
+  console.log('message2', message2.b.c)
 })
-person.value = 'guoqin-1'
 </script>
 <style lang="">
   
