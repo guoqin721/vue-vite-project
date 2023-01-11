@@ -10,7 +10,7 @@ import Aview from '@/components/AView.vue'
 import Bview from '@/components/BView.vue'
 import Cview from '@/components/CView.vue'
 // markRaw跳过reactive中的proxy
-// shallowRef知道ref.value的第一层
+// shallowRef只到ref.value的第一层
 import { ref, shallowRef, markRaw, reactive } from 'vue'
 const i = ref<number>(0)
 const compId = shallowRef(Aview)

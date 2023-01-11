@@ -8,7 +8,7 @@ const title = ref<string>()
 const msg='msg'
 const arr = ref([1, 2, 3])
 const receive = (str1:string, str2: string) => {
- console.log(str1, str2)
+  console.log(str1, str2)
 }
 const child = ref<InstanceType<typeof Child>>()
 onMounted(() => {
