@@ -5,7 +5,6 @@ import 'element-plus/dist/index.css'
 import App from './App.vue'
 import router from './router'
 import mitt from 'mitt'
-import useResizeGuoqin from 'use-resize-guoqin'
 // // 注册全局组件
 // import Tree from '@/components/Tree.vue'
 import './assets/main.css'
@@ -24,8 +23,6 @@ const Mitt = mitt()
 app.use(createPinia())
 app.use(router)
 app.use(ElementPlus)
-// 配合方法二 用全局指令
-app.use(useResizeGuoqin)
 app.config.globalProperties.$Bus = Mitt
 
 app.mount('#app')

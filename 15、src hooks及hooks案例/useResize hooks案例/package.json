@@ -1,0 +1,19 @@
+{
+  "name": "use-resize-guoqin",
+  "version": "1.0.3",
+  "description": "",
+  "main": "dist/use-resize-guoqin.mjs",
+  "module": "dist/use-resize-guoqin.umd.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "files": ["dist", "index.d.ts"],
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^4.3.9",
+    "vue": "^3.3.4"
+  }
+}
