@@ -1,6 +1,12 @@
 <template>
 <div style="display: flex;">
-  <button @click="change(item, index)" class="btn" :class="index === i ? 'active': ''" v-for="(item, index) in data">{{item.name}}</button>
+  <button
+    @click="change(item, index)"
+    class="btn" :class="index === i ? 'active': ''"
+    v-for="(item, index) in data"
+  >
+    {{item.name}}
+  </button>
 </div>
 <component :is="compId"></component>
 </template>
